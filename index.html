@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain Wang - Concept Artist · Compositor · 3D Environment Artist</title>
+    <link rel="icon" type="image/png" href="32x32.png">
+    <link rel="shortcut icon" type="image/png" href="32x32.png">
+    <link rel="apple-touch-icon" href="32x32.png">
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <h1 class="artist-name">
+                <a href="/" class="artist-name-link" onclick="showArtworkPage(); return false;">Rain Wang</a>
+            </h1>
+            <p class="artist-subtitle">Concept Artist · Compositor · 3D Environment Artist</p>
+            <p class="artist-specialties">Matte Painting / Illustration Art / Map Design / Installation Art</p>
+        </div>
+        <nav class="header-nav">
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#artwork" class="nav-link active">Artwork</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#artwork" class="dropdown-link" onclick="showArtworkPage(); return false;">CONCEPT ART</a></li>
+                        <li><a href="#personal-reel" class="dropdown-link">PERSONAL REEL</a></li>
+                        <li><a href="#illustration" class="dropdown-link">ILLUSTRATION</a></li>
+                        <li><a href="map-design.html" target="_blank" class="dropdown-link">MAP DESIGN</a></li>
+                        <li><a href="drawing-art.html" target="_blank" class="dropdown-link">DRAWING ART</a></li>
+                        <li><a href="fine-art.html" target="_blank" class="dropdown-link">FINE ART</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://www.instagram.com/rainwang_ca/#" target="_blank" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.artstation.com/rainw" target="_blank" class="social-link" title="ArtStation">
+                    <i class="fab fa-artstation"></i>
+                </a>
+                <a href="https://www.behance.net/shuwang4" target="_blank" class="social-link" title="Behance">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="artwork-grid" id="artworkGrid">
+            <!-- Artwork images will be loaded dynamically -->
+        </div>
+        
+        <!-- Section Separator -->
+        <div class="section-separator"></div>
+        
+        <!-- Vertical Artwork Section -->
+        <div class="vertical-artwork-section">
+            <div class="vertical-artwork-grid" id="verticalArtworkGrid">
+                <!-- Vertical artwork images will be loaded dynamically -->
+            </div>
+        </div>
+        
+        <!-- Section Separator -->
+        <div class="section-separator"></div>
+        
+        <!-- Dual Reality Artwork Section -->
+        <div class="dual-reality-section">
+            <div class="dual-reality-grid" id="dualRealityGrid">
+                <!-- Dual reality artwork images will be loaded dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Personal Reel Page -->
+    <main class="personal-reel-page" id="personalReelPage" style="display: none;">
+        <div class="reel-container">
+            <h2 class="reel-title">Rain wang – personal reel</h2>
+            <div class="reel-video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/CmeMAecFogo?autoplay=0&rel=0&modestbranding=1&showinfo=0&controls=1&fs=1" 
+                    title="Rain Wang Personal Reel" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+    <!-- Illustration Page -->
+    <main class="illustration-page" id="illustrationPage" style="display: none;">
+        <div class="illustration-container">
+            <div class="illustration-grid" id="illustrationGrid">
+                <!-- Illustration images will be loaded dynamically -->
+            </div>
+            
+            <!-- Section Separator -->
+            <div class="section-separator"></div>
+            
+            <!-- Illustration Practice Works Section -->
+            <div class="illustration-practice-section">
+                <div class="illustration-practice-grid" id="illustrationPracticeGrid">
+                    <!-- Illustration practice images will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Map Design Page -->
+    <main class="map-design-page" id="mapDesignPage" style="display: none;">
+        <div class="map-design-container">
+            <div class="map-design-grid" id="mapDesignGrid">
+                <!-- Map design images will be loaded dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Drawing Art Page -->
+    <main class="drawing-art-page" id="drawingArtPage" style="display: none;">
+        <div class="drawing-art-container">
+            <div class="drawing-art-grid" id="drawingArtGrid">
+                <!-- Drawing art images will be loaded dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Fine Art Page -->
+    <main class="fine-art-page" id="fineArtPage" style="display: none;">
+        <div class="fine-art-container">
+            <div class="fine-art-grid" id="fineArtGrid">
+                <!-- Fine art images will be loaded dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- About Page -->
+    <main class="about-page" id="aboutPage" style="display: none;">
+        <div class="about-container">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="works_jpg/logos/mascot01.jpg" alt="Rain Wang Mascot" class="mascot-image">
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-name">Rain (Shu Wang)</h2>
+                    <div class="contact-info">
+                        <p class="contact-item">w: <a href="https://www.artstation.com/rainw" target="_blank">www.artstation.com/rainw</a></p>
+                        <p class="contact-item">E: <a href="mailto:rainshuwangca@gmail.com">rainshuwangca@gmail.com</a></p>
+                        <p class="contact-item">Resume: <a href="works_jpg/logos/S25_RainWang_Resume.pdf" target="_blank" download title="Download Resume"><i class="fas fa-download"></i></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist Statement -->
+            <div class="artist-statement">
+                <p class="statement-paragraph">
+                    My passion lies in large-scale environments, history, and science fiction—elements that fundamentally shape how I learn, create, and imagine. Through years of immersive reading in geography, religion, literature, and art history, I've developed a deep appreciation for the interconnectedness of knowledge. For me, storytelling is not just a tool—it's a way of life.
+                </p>
+                <p class="statement-paragraph">
+                    In my project, every shot within a single complete scene carries a fragment of a larger narrative. It unveils a world shaped by layered causes and the evolution of diverse cultures. I aim to express this through purely visual means, guiding the viewer through time, belief systems, and cultural structures—from clothing design to city layouts.
+                </p>
+                <p class="statement-paragraph">
+                    Ultimately, I strive to share the wonder of this world with others—to ignite curiosity about why civilizations emerge the way they do, and to inspire reflection on the forces that shape human behavior across history.
+                </p>
+            </div>
+
+            <!-- Professional Bio -->
+            <div class="professional-bio">
+                <p class="bio-paragraph">
+                    Rain Wang is a visual storyteller and concept artist whose work explores the intersection of large-scale environments, historical logic, and speculative sci-fi worlds. With a background in animation and visual effects, Rain builds immersive narratives through atmospheric compositions, architectural symbolism, and layered worldbuilding.
+                </p>
+                
+                <p class="bio-paragraph">
+                    He works across concept art, compositing, and production design, blending 3D and 2D workflows to craft cinematic stills that suggest vast, unseen worlds. For Rain, storytelling is not just narrative—it is the architecture of thought.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-title">Rain Wang | Selected Works 2025</div>
+            <div class="footer-social-links">
+                <a href="https://www.instagram.com/rainwang_ca/#" target="_blank" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.artstation.com/rainw" target="_blank" class="social-link" title="ArtStation">
+                    <i class="fab fa-artstation"></i>
+                </a>
+                <a href="https://www.behance.net/shuwang4" target="_blank" class="social-link" title="Behance">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Rain Wang. All artwork is copyrighted and protected by law.</p>
+                <p>Unauthorized use, reproduction, or distribution is strictly prohibited.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for fullscreen artwork view -->
+    <div class="modal" id="artworkModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-title" id="modalTitle"></div>
+            <div class="modal-nav">
+                <button class="nav-btn prev-btn" id="prevBtn">&lt;</button>
+                <button class="nav-btn next-btn" id="nextBtn">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
